@@ -166,7 +166,7 @@ class HomeVeiw extends GetView<HomeController> {
                               ),
                               Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(
@@ -194,7 +194,7 @@ class HomeVeiw extends GetView<HomeController> {
                                         bottom: 4.0, left: 10.0),
                                     child: Text(
                                       controller.products[index].name +
-                                          "Modern",
+                                          " Modern",
                                       style: TextStyle(fontSize: 18.0),
                                     ),
                                   ),
@@ -204,7 +204,11 @@ class HomeVeiw extends GetView<HomeController> {
                                 style: ElevatedButton.styleFrom(
                                   minimumSize: Size(
                                     MediaQuery.of(context).size.width,
-                                    10.0,
+                                    35.0,
+                                  ),
+                                  maximumSize: Size(
+                                    MediaQuery.of(context).size.width,
+                                    40,
                                   ),
                                 ),
                                 onPressed: () {},
@@ -257,14 +261,19 @@ class HomeVeiw extends GetView<HomeController> {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         width: width * 0.33,
+                        height: height * 0.4,
                         child: Column(
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 4.0),
-                              child: Icon(
-                                Icons.ac_unit,
-                                size: 60.0,
-                                color: Colors.blueAccent.shade200,
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 4.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  child: Image.asset(
+                                    controller.suits[index].imageUrl,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
                             ),
                             SizedBox(height: 8.0),

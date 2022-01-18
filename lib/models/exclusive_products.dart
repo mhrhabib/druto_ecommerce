@@ -3,6 +3,9 @@ class ExclusiveProducts {
   final String price;
   final String productImageUrl;
 
-  ExclusiveProducts(
-      {required this.name, required this.price, required this.productImageUrl});
+  ExclusiveProducts({
+    required this.name,
+    required this.price,
+    required this.productImageUrl,
+  });
 }
