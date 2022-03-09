@@ -62,7 +62,8 @@ class SignUpPage extends StatelessWidget {
                           fillColor: Colors.white,
                           prefixIcon: Icon(
                             Icons.email_outlined,
-                            color: Colors.white70,
+                            color: Colors.white,
+                            size: 32,
                           ),
                         ),
                       ),
@@ -89,7 +90,8 @@ class SignUpPage extends StatelessWidget {
                             hintText: "Password",
                             prefixIcon: Icon(
                               Icons.lock,
-                              color: Colors.white70,
+                              color: Colors.white,
+                              size: 32,
                             ),
                             suffix: Icon(
                               Icons.remove_red_eye_outlined,

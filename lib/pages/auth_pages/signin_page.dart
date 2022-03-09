@@ -17,7 +17,7 @@ class SignInPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "Bazaar",
+                  "DoCommerce",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 44,
@@ -46,10 +46,15 @@ class SignInPage extends StatelessWidget {
                         controller: emailController,
                         decoration: InputDecoration(
                           hintText: "Enter Your Email",
+                          hintStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                           fillColor: Colors.white,
                           prefixIcon: Icon(
                             Icons.person_outline,
-                            color: Colors.black,
+                            color: Colors.white,
+                            size: 32,
                           ),
                         ),
                       ),
@@ -61,7 +66,15 @@ class SignInPage extends StatelessWidget {
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: "Enter Your Password",
-                          prefixIcon: Icon(Icons.lock),
+                          hintStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            color: Colors.white,
+                            size: 32,
+                          ),
                           suffix: InkWell(
                             onTap: () {},
                             child: Text(
